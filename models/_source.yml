@@ -5,26 +5,5 @@ sources:
     database: YOUR_GC_PROJECT_ID
     tables:
       - name: raw_items
-        columns:
-          - name: item_key
-            description: ""
-            data_type: STRING
-          - name: item_code
-            description: ""
-            data_type: STRING
       - name: raw_shops
-        columns:
-          - name: shop_id
-            description: ""
-            data_type: INT64
-          - name: item_key
-            description: ""
-            data_type: STRING
       - name: raw_item_shops
-        columns:
-          - name: item_code
-            description: ""
-            data_type: STRING
-          - name: shop_id
-            description: ""
-            data_type: INT64
