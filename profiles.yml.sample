@@ -1,0 +1,13 @@
+my_dbt_project:
+  outputs:
+    dev:
+      dataset: tmp_dbt_osmosis_test
+      job_execution_timeout_seconds: 1200
+      job_retries: 1
+      location: asia-northeast1
+      method: oauth
+      priority: interactive
+      project: YOUR_GC_PROJECT_ID
+      threads: 1
+      type: bigquery
+  target: dev

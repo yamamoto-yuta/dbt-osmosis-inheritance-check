@@ -1,0 +1,55 @@
+version: 2
+models:
+  - name: stg_shops
+    columns:
+      - name: shop_id
+        description: ''
+        meta:
+          osmosis_progenitor: source.my_dbt_project.tmp_dbt_osmosis_test.raw_shops
+        data_type: INT64
+      - name: item_key
+        description: ''
+        meta:
+          osmosis_progenitor: source.my_dbt_project.tmp_dbt_osmosis_test.raw_shops
+        data_type: STRING
+  - name: fct_item_shops
+    columns:
+      - name: item_key
+        description: ''
+        meta:
+          osmosis_progenitor: source.my_dbt_project.tmp_dbt_osmosis_test.raw_items
+        data_type: STRING
+      - name: item_code
+        description: ''
+        meta:
+          osmosis_progenitor: source.my_dbt_project.tmp_dbt_osmosis_test.raw_items
+        data_type: STRING
+      - name: shop_id
+        description: ''
+        meta:
+          osmosis_progenitor: source.my_dbt_project.tmp_dbt_osmosis_test.raw_shops
+        data_type: INT64
+  - name: stg_item_shops
+    columns:
+      - name: item_code
+        description: ''
+        meta:
+          osmosis_progenitor: source.my_dbt_project.tmp_dbt_osmosis_test.raw_item_shops
+        data_type: STRING
+      - name: shop_id
+        description: ''
+        meta:
+          osmosis_progenitor: source.my_dbt_project.tmp_dbt_osmosis_test.raw_item_shops
+        data_type: INT64
+  - name: stg_items
+    columns:
+      - name: item_key
+        description: ''
+        meta:
+          osmosis_progenitor: source.my_dbt_project.tmp_dbt_osmosis_test.raw_items
+        data_type: STRING
+      - name: item_code
+        description: ''
+        meta:
+          osmosis_progenitor: source.my_dbt_project.tmp_dbt_osmosis_test.raw_items
+        data_type: STRING
